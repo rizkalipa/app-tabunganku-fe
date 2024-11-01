@@ -8,7 +8,7 @@
                     </div>
                     <div>
                         <p class="text-gray-500 text-xs md:text-sm">Good Morning</p>
-                        <h1 class="text-lg md:text-xl font-semibold">Nabilakuuu</h1>
+                        <h1 class="text-lg md:text-xl font-semibold">Nabilbilbillaa</h1>
                     </div>
                 </div>
                 <div class="relative">
@@ -23,33 +23,13 @@
         </div>
 
         <!-- Bottom Navigation -->
-        <nav class="fixed bottom-0 w-full mx-auto bg-white border-t">
-            <div class="flex justify-between items-center lg:w-6/12 md:w-8/12 w-full mx-auto px-8 pb-10 pt-5">
-                <button class="flex flex-col items-center gap-1">
-                    <span class="text-base lg:text-2xl text-gray-900"><i class="fas fa-home"></i></span>
-                    <span class="hidden md:inline-block text-xs font-medium text-gray-900">Home</span>
-                </button>
-                <button class="flex flex-col items-center gap-1">
-                    <span class="text-base lg:text-2xl text-gray-400"><i class="fas fa-chart-simple"></i></span>
-                    <span class="hidden md:inline-block text-xs font-medium text-gray-400">Insight</span>
-                </button>
-                <button class="flex flex-col items-center">
-                    <div class="w-14 h-14 bg-gray-900 rounded-full flex items-center justify-center shadow-lg">
-                        <span class="text-base lg:text-2xl text-white"><i class="fas fa-plus"></i></span>
-                    </div>
-                </button>
-                <button class="flex flex-col items-center gap-1">
-                    <span class="text-base lg:text-2xl text-gray-400"><i class="fas fa-arrow-right-arrow-left"></i></span>
-                    <span class="hidden md:inline-block text-xs font-medium text-gray-400">Transaction</span>
-                </button>
-                <button class="flex flex-col items-center gap-1">
-                    <span class="text-base lg:text-2xl text-gray-400"><i class="fas fa-user"></i></span>
-                    <span class="hidden md:inline-block text-xs font-medium text-gray-400">Profile</span>
-                </button>
-            </div>
-        </nav>
+        <NavComponent />
     </div>
 </template>
+
+<script setup>
+    import NavComponent from "@/components/NavComponent.vue";
+</script>
 
 <style>
 

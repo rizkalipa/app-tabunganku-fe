@@ -94,7 +94,13 @@
                 <button class="text-gray-500 px-6 py-2 rounded-full text-sm border">Completed</button>
             </div>
 
-            <div class="flex flex-nowrap gap-4 overflow-x-scroll hide-scroll-bar pb-5">
+            <div
+                class="flex flex-nowrap gap-4 overflow-x-scroll hide-scroll-bar pb-5
+                  [&::-webkit-scrollbar]:h-2
+                  [&::-webkit-scrollbar-track]:rounded-full
+                  [&::-webkit-scrollbar-track]:bg-gray-100
+                  [&::-webkit-scrollbar-thumb]:rounded-full
+                  [&::-webkit-scrollbar-thumb]:bg-gray-200">
                 <div class="inline-block">
                     <div class="p-4 w-[250px] md:w-[350px] rounded-2xl border border-gray-200">
                         <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center mb-3">
@@ -131,7 +137,7 @@
 
         <!-- Recent Transaction -->
         <section class="mb-16">
-            <div class="flex justify-between items-center mb-4">
+            <div class="flex justify-between items-center mb-7">
                 <h3 class="text-xl font-semibold">Recent Transaction</h3>
                 <button class="text-gray-500 text-sm">See All</button>
             </div>
@@ -139,11 +145,11 @@
             <div class="flex items-center justify-between p-4 bg-gray-50 rounded-2xl">
                 <div class="flex items-center gap-4">
                     <div class="w-9 md:w-12 h-9 md:h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                        <span class="text-sm"><i class="fas fa-receipt"></i></span>
+                        <span class="text-sm md:text-lg"><i class="fas fa-receipt"></i></span>
                     </div>
                     <div>
                         <h4 class="font-semibold text-base md:text-lg">Bills</h4>
-                        <p class="text-xs md:text-lg text-gray-500">27 July 2024 10:40 AM</p>
+                        <p class="text-xs sm:text-sm text-gray-500">27 July 2024 10:40 AM</p>
                     </div>
                 </div>
                 <span class="font-semibold text-gray-900 text-lg">-$200</span>
