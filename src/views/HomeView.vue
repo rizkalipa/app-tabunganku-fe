@@ -25,23 +25,23 @@
                 <div class="flex justify-between items-center mb-4">
                     <div class="flex items-center justify-center">
                         <div class="w-4 h-4 rounded-full bg-emerald-300 flex items-center justify-center mr-2"></div>
-                        <p class="text-lg">Income</p>
+                        <p class="text-base">Income</p>
                     </div>
-                    <p class="text-xl text-gray-400">58%</p>
+                    <p class="text-base text-gray-400">58%</p>
                 </div>
                 <div class="flex justify-between items-center mb-4">
                     <div class="flex items-center justify-center">
                         <div class="w-4 h-4 rounded-full bg-rose-500 flex items-center justify-center mr-2"></div>
-                        <p class="text-lg">Expenses</p>
+                        <p class="text-base">Expenses</p>
                     </div>
-                    <p class="text-xl text-gray-400">20%</p>
+                    <p class="text-base text-gray-400">20%</p>
                 </div>
                 <div class="flex justify-between items-center">
                     <div class="flex items-center justify-center">
                         <div class="w-4 h-4 rounded-full bg-gray-300 flex items-center justify-center mr-2"></div>
-                        <p class="text-lg">Left</p>
+                        <p class="text-base">Left</p>
                     </div>
-                    <p class="text-xl text-gray-400">30%</p>
+                    <p class="text-base text-gray-400">30%</p>
                 </div>
             </div>
 
