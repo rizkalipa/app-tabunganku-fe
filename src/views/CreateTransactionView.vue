@@ -89,12 +89,43 @@
                             <div class="inline-block relative w-full">
                                 <select class="text-base block appearance-none w-full bg-white border border-[#e0e0e0] py-3 px-6 rounded-md focus:outline-none">
                                     <option value="1">Saving</option>
+                                    <option value="2">Goals</option>
                                 </select>
                                 <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                                     <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="mb-5">
+                            <p class="text-sm text-gray-300 mb-2">What Goals ?</p>
+                            <div class="inline-block relative w-full mb-2">
+                                <div class="flex flex-wrap items-center gap-4">
+                                    <div class="bg-emerald-100 px-4 py-2 rounded-full flex items-center justify-center">
+                                        <span class="text-sm mr-2"><i class="fas fa-plane"></i></span>
+                                        <h4 class="font-semibold text-base">Travel</h4>
+                                    </div>
+                                    <div class="bg-emerald-100 px-4 py-2 rounded-full flex items-center justify-center">
+                                        <span class="text-sm mr-2"><i class="fas fa-laptop"></i></span>
+                                        <h4 class="font-semibold text-base">Laptop</h4>
+                                    </div>
+                                    <div class="bg-emerald-100 px-4 py-2 rounded-full flex items-center justify-center">
+                                        <span class="text-sm mr-2"><i class="fas fa-mobile-phone"></i></span>
+                                        <h4 class="font-semibold text-base">Gadget</h4>
+                                    </div>
+                                    <div class="bg-emerald-100 px-4 py-2 rounded-full flex items-center justify-center">
+                                        <span class="text-sm mr-2"><i class="fas fa-layer-group"></i></span>
+                                        <h4 class="font-semibold text-base">Goods</h4>
+                                    </div>
+
+                                    <button class="bg-gray-100 px-4 py-2 rounded-full flex items-center justify-center w-full">
+                                        <span class="text-sm mr-2"><i class="fas fa-plus-circle"></i></span>
+                                        <h4 class="font-semibold text-base">Add Goals</h4>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="mb-5">
                             <p class="text-sm text-gray-300 mb-2">Notes</p>
                             <input type="text" class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium outline-none focus:border-gray-500" />

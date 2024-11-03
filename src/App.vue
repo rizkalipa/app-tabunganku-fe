@@ -23,6 +23,6 @@
 
 <style>
     #app {
-        /*--animate-duration: 0.5s;*/
+        --animate-duration: 0.5s;
     }
 </style>

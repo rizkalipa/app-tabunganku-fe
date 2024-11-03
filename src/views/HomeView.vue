@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="home-view">
         <div class="flex justify-between items-center">
             <div class="flex items-center gap-4">
                 <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-100 flex items-center justify-center">
@@ -182,3 +182,9 @@ export default {
   components: {}
 }
 </script>
+
+<style>
+    #home-view {
+        --animate-duration: 2s;
+    }
+</style>
