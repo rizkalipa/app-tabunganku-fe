@@ -47,8 +47,8 @@ const routes = [
     name: 'create-transaction',
     component: CreateTransactionView,
     meta: {
-      enterClass: 'animate__animated animate__fadeInUp animate__fast',
-      leaveClass: 'animate__animated animate__fadeOutDown animate__fast'
+      enterClass: 'animate__animated animate__fadeInUp animate__faster',
+      leaveClass: 'animate__animated animate__fadeOutDown animate__faster'
     }
   }
 ]
