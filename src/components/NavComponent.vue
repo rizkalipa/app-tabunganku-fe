@@ -11,11 +11,11 @@
                 <span class="hidden md:inline-block text-xs font-medium" :class="getPageClass('insight')">Insight</span>
             </router-link>
 
-            <button class="flex flex-col py-6 items-center">
+            <router-link to="create-transaction" class="flex flex-col py-6 items-center">
                 <div class="w-14 h-14 bg-gray-900 rounded-full flex items-center justify-center shadow-lg">
                     <span class="text-lg lg:text-2xl text-white"><i class="fas fa-plus"></i></span>
                 </div>
-            </button>
+            </router-link>
 
             <router-link to="transaction" class="flex flex-col py-6 items-center gap-1">
                 <span class="text-lg lg:text-2xl" :class="getPageClass('transaction')"><i class="fas fa-arrow-right-arrow-left"></i></span>

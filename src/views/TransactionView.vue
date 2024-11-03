@@ -1,6 +1,6 @@
 <template>
     <div>
-        <section class="my-16">
+        <section class="mb-16">
             <div class="mb-8">
                 <div class="flex justify-between items-center">
                     <h1 class="text-xl font-semibold">Transaction</h1>
