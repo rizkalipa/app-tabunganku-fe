@@ -25,4 +25,9 @@
     #app {
         --animate-duration: 0.5s;
     }
+
+    html {
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+    }
 </style>
