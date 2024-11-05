@@ -1,7 +1,7 @@
 <template>
     <div class="h-full flex items-center justify-center">
-        <section class="relative w-8/12 m-auto">
-            <div class="mb-16">
+        <section class="relative w-9/12 h-full m-auto">
+            <div class="my-16">
                 <div class="w-6/12 mx-auto mb-8">
                     <img src="@/assets/tabunganku-logo.jpeg" alt="">
                 </div>
@@ -28,7 +28,7 @@
             </div>
         </section>
 
-        <div class="absolute bottom-5 text-center">
+        <div class="absolute bottom-16 text-center">
             <p class="text-sm text-gray-400">&copy; Copyright 2024 Tabunganku</p>
         </div>
 
