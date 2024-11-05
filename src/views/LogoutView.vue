@@ -9,7 +9,7 @@ export default {
         logout() {
             localStorage.clear()
             this.$store.commit('UserStore/setUserData', '')
-            location.href = `${location.origin}`
+            this.$router.push({ name: 'login' })
         }
     },
     mounted() {
