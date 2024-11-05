@@ -1,20 +1,12 @@
 <template>
     <div id="home-view">
-        <div class="flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-100 flex items-center justify-center">
-                    <span class="text-lg text-gray-500"><i class="far fa-user"></i></span>
-                </div>
-                <div>
-                    <p class="text-gray-500 text-xs md:text-sm">Good Morning</p>
-                    <h1 class="text-lg md:text-xl font-semibold">Nabilbilbillaa</h1>
-                </div>
+        <div class="flex items-center justify-between">
+            <div class="text-left">
+                <p class="text-gray-500 text-xs md:text-sm">Good Morning</p>
+                <h1 class="text-lg md:text-xl font-semibold">{{ userData.name }}</h1>
             </div>
-            <div class="relative">
-                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-100 flex items-center justify-center">
-                    <span class="text-lg text-gray-500"><i class="far fa-bell"></i></span>
-                </div>
-                <div class="absolute top-2 right-2 md:right-3 w-2 h-2 bg-red-500 rounded-full"></div>
+            <div class="w-12 h-12 md:w-12 md:h-12 rounded-full bg-gray-100 flex items-center justify-center">
+                <span class="text-lg text-gray-500"><i class="far fa-user"></i></span>
             </div>
         </div>
 
@@ -63,41 +55,41 @@
                 </div>
             </div>
 
-<!--            <div>-->
-<!--                <div class="flex items-center gap-4">-->
-<!--                    <div class="flex-1">-->
-<!--                        <div class="flex justify-between text-sm mb-1">-->
-<!--                            <span>Income</span>-->
-<!--                            <span>58%</span>-->
-<!--                        </div>-->
-<!--                        <div class="w-full h-2 bg-emerald-100 rounded-full">-->
-<!--                            <div class="w-[58%] h-full bg-emerald-400 rounded-full"></div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="flex items-center gap-4">-->
-<!--                    <div class="flex-1">-->
-<!--                        <div class="flex justify-between text-sm mb-1">-->
-<!--                            <span>Expenses</span>-->
-<!--                            <span>32%</span>-->
-<!--                        </div>-->
-<!--                        <div class="w-full h-2 bg-pink-100 rounded-full">-->
-<!--                            <div class="w-[32%] h-full bg-pink-400 rounded-full"></div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="flex items-center gap-4">-->
-<!--                    <div class="flex-1">-->
-<!--                        <div class="flex justify-between text-sm mb-1">-->
-<!--                            <span>Left</span>-->
-<!--                            <span>24%</span>-->
-<!--                        </div>-->
-<!--                        <div class="w-full h-2 bg-gray-100 rounded-full">-->
-<!--                            <div class="w-[24%] h-full bg-gray-300 rounded-full"></div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
+            <!--            <div>-->
+            <!--                <div class="flex items-center gap-4">-->
+            <!--                    <div class="flex-1">-->
+            <!--                        <div class="flex justify-between text-sm mb-1">-->
+            <!--                            <span>Income</span>-->
+            <!--                            <span>58%</span>-->
+            <!--                        </div>-->
+            <!--                        <div class="w-full h-2 bg-emerald-100 rounded-full">-->
+            <!--                            <div class="w-[58%] h-full bg-emerald-400 rounded-full"></div>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="flex items-center gap-4">-->
+            <!--                    <div class="flex-1">-->
+            <!--                        <div class="flex justify-between text-sm mb-1">-->
+            <!--                            <span>Expenses</span>-->
+            <!--                            <span>32%</span>-->
+            <!--                        </div>-->
+            <!--                        <div class="w-full h-2 bg-pink-100 rounded-full">-->
+            <!--                            <div class="w-[32%] h-full bg-pink-400 rounded-full"></div>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="flex items-center gap-4">-->
+            <!--                    <div class="flex-1">-->
+            <!--                        <div class="flex justify-between text-sm mb-1">-->
+            <!--                            <span>Left</span>-->
+            <!--                            <span>24%</span>-->
+            <!--                        </div>-->
+            <!--                        <div class="w-full h-2 bg-gray-100 rounded-full">-->
+            <!--                            <div class="w-[24%] h-full bg-gray-300 rounded-full"></div>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
         </section>
 
         <!-- Saving Goals -->
@@ -177,14 +169,19 @@
 </template>
 
 <script>
+import {mapState} from "vuex";
+
 export default {
-  name: 'HomeView',
-  components: {}
+    name: 'HomeView',
+    components: {},
+    computed: {
+        ...mapState('UserStore', ['userData'])
+    }
 }
 </script>
 
 <style>
-    #home-view {
-        --animate-duration: 2s;
-    }
+#home-view {
+    --animate-duration: 0.2s;
+}
 </style>

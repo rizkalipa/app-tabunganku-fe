@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="create-transaction-view">
         <section class="mb-16">
             <div class="mb-16">
                 <div class="flex justify-between items-center">

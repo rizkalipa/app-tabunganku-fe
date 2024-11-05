@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="transaction-view">
         <section class="mb-16">
             <div class="mb-8">
                 <div class="flex justify-between items-center">
@@ -94,5 +94,7 @@ export default {
 </script>
 
 <style scoped>
-
+    #transaction-view {
+        --animate-duration: 0.2s;
+    }
 </style>

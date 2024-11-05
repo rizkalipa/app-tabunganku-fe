@@ -1,31 +1,28 @@
 <template>
-    <div id="app" class="overflow-hidden">
-        <div class="lg:w-6/12 md:w-8/12 w-full mx-auto mt-8 text-3xl tracking-wide px-5 lg:p-0 mb-44">
-            <router-view v-slot="{Component, route}">
-                <transition
-                    :enter-active-class="route.meta.enterClass"
-                    :leave-active-class="route.meta.leaveClass"
-                    mode="out-in"
-                >
-                    <component :is="Component" />
-                </transition>
-            </router-view>
-        </div>
+    <div class="overflow-hidden relative">
+        <component :is="component" />
 
-        <!-- Bottom Navigation -->
-        <NavComponent />
+        <NotificationComponent />
     </div>
 </template>
 
-<script setup>
-    import NavComponent from "@/components/NavComponent.vue";
+<script>
+    import DefaultLayout from "@/layout/DefaultLayout.vue";
+    import AuthLayout from "@/layout/AuthLayout.vue";
+    import NotificationComponent from "@/components/NotificationComponent.vue";
+
+    export default {
+        components: {NotificationComponent, DefaultLayout, AuthLayout},
+        computed: {
+            component() {
+                if (this.$route.meta.layout) return this.$route.meta.layout
+                return 'DefaultLayout'
+            }
+        }
+    }
 </script>
 
 <style>
-    #app {
-        --animate-duration: 0.5s;
-    }
-
     html {
         -ms-touch-action: manipulation;
         touch-action: manipulation;
