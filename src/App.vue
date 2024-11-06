@@ -1,5 +1,5 @@
 <template>
-    <div class="overflow-hidden relative">
+    <div class="relative overflow-hidden relative">
         <component :is="component" />
 
         <NotificationComponent />

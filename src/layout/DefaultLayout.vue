@@ -1,5 +1,5 @@
 <template>
-    <div class="lg:w-6/12 md:w-8/12 w-full mx-auto mt-8 text-3xl tracking-wide px-5 lg:p-0 mb-44">
+    <div id="default-layout" class="lg:w-6/12 md:w-8/12 w-full mx-auto mt-8 text-3xl tracking-wide px-5 lg:p-0 mb-44">
         <router-view v-slot="{Component, route}">
             <transition
                 :enter-active-class="route.meta.enterClass"
@@ -26,5 +26,7 @@ export default {
 </script>
 
 <style scoped>
+    #default-layout {
 
+    }
 </style>
