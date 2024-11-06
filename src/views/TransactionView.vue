@@ -3,7 +3,7 @@
         <section class="mb-16">
             <div class="mb-8">
                 <div class="flex justify-between items-center">
-                    <h1 class="text-xl font-semibold">Transaction</h1>
+                    <h1 class="text-xl font-semibold">Expenses</h1>
 
                     <button class="flex items-center gap-2 px-4 py-1 rounded-full border border-gray-900">
                         <span class="text-sm">Today</span>
