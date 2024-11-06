@@ -83,6 +83,7 @@ const router = createRouter({
 
 router.beforeEach(async (to, from, next) => {
     let accessToken = localStorage.getItem('accessToken')
+
     // const {token} = to.query
     //
     // if (token) {
