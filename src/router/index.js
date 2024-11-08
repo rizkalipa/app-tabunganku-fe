@@ -109,6 +109,8 @@ router.beforeEach(async (to, from, next) => {
     // }
 
     if (accessToken && !Store.state.UserStore.userData) {
+        Store.commit('NotificationStore/setLoading', true)
+
         try {
             const res = await UserProfile()
 
@@ -124,6 +126,8 @@ router.beforeEach(async (to, from, next) => {
                 })
             }
         }
+
+        Store.commit('NotificationStore/setLoading', false)
     } else if (accessToken && !to.meta.isLogin && (to.path === '/login' || to.path === '/register' || to.path === '/register-social')) {
         next({name: 'home'})
     } else if (to.meta.isLogin && !accessToken) {

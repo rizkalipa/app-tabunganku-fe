@@ -5,7 +5,7 @@
                 <div class="w-6/12 mx-auto mb-8">
                     <img src="@/assets/tabunganku-logo.jpeg" alt="">
                 </div>
-                <h1 class="text-base text-gray-700 font-semibold text-center">Signin your Account</h1>
+                <h1 class="text-base                                                                                                                       text-gray-700 font-semibold text-center">Signin your Account</h1>
             </div>
 
             <div>
@@ -66,10 +66,7 @@ export default {
                     await this.$router.push({ name: 'home' })
                 }
             } catch (e) {
-                this.openNotification({
-                    message: e.response.data.message,
-                    icon: ''
-                })
+                this.$helper.errorNotification(e.response.data.message)
             }
 
             this.isLoading = false
@@ -82,10 +79,7 @@ export default {
                     this.setUserData(res.data)
                 }
             } catch (e) {
-                await this.$store.dispatch('NotificationStore/openNotification', {
-                    message: e.response.data.message,
-                    type: 'error'
-                })
+                this.$helper.errorNotification(e.response.data.message)
             }
         }
     }

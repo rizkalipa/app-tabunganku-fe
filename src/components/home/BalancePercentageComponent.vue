@@ -59,22 +59,18 @@
 
 <script>
 import {getBalance, getBalancePercentage} from "@/service/DepositService";
+import {mapMutations, mapState} from "vuex";
 
 export default {
     name: "BalancePercentageComponent",
     data() {
         return {
             isBalanceLoading: false,
-            isPercentageLoading: false,
-            balance: 0,
-            percentage: {
-                income: null,
-                expense: null,
-                left: null
-            }
+            isPercentageLoading: false
         }
     },
     computed: {
+        ...mapState('BalanceStore', ['balance', 'percentage']),
         formatBalance() {
             return new Intl.NumberFormat('id-ID').format(this.balance)
         },
@@ -87,7 +83,9 @@ export default {
         }
     },
     methods: {
+        ...mapMutations('BalanceStore', ['setBalance', 'setPercentage']),
         async getBalance() {
+            if (this.balance !== null) return
             this.isBalanceLoading = true
 
             try {
@@ -96,7 +94,8 @@ export default {
 
                 if (res && res.data && res.data.data) {
                     let data = res.data.data
-                    this.balance = parseFloat(data.amount)
+                    this.setBalance(parseFloat(data.amount))
+
                 }
             } catch (e) {
                 console.log(e.response.data.message)
@@ -105,6 +104,7 @@ export default {
             this.isBalanceLoading = false
         },
         async getBalancePercentage() {
+            if (this.percentage.income !== null) return
             this.isPercentageLoading = true
 
             try {
@@ -112,8 +112,7 @@ export default {
                 let res = await getBalancePercentage(params)
 
                 if (res && res.data && res.data.data) {
-                    this.percentage = res.data.data
-                    console.log(this.percentage)
+                    this.setPercentage(res.data.data)
                 }
             } catch (e) {
                 console.log(e.response.data.message)

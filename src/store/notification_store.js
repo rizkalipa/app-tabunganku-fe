@@ -2,6 +2,7 @@ const NotificationStore = {
     namespaced: true,
     state: {
         isOpen: false,
+        isLoadingScreen: false,
         message: '',
         icon: ''
     },
@@ -16,6 +17,9 @@ const NotificationStore = {
             state.isOpen = false
             state.message = ''
             state.icon = ''
+        },
+        setLoading(state, value) {
+            state.isLoadingScreen = value
         }
     }
 }

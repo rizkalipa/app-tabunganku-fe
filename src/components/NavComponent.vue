@@ -1,5 +1,5 @@
 <template>
-    <nav class="fixed bottom-0 w-full mx-auto bg-white border-t">
+    <nav class="fixed bottom-0 w-full mx-auto bg-white border-t z-40">
         <div class="flex justify-between items-center lg:w-6/12 md:w-8/12 w-full mx-auto px-8 pb-5">
             <router-link to="/" class="flex flex-col py-6 items-center gap-1">
                 <span class="text-lg lg:text-2xl" :class="getPageClass('home')"><i class="fas fa-home"></i></span>
