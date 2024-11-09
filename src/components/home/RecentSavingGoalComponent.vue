@@ -2,13 +2,13 @@
     <!-- Saving Goals -->
     <section class="mb-8">
         <div class="flex justify-between items-center mb-4">
-            <h3 class="text-xl font-semibold">Saving Goals</h3>
+            <h3 class="text-base md:text-lg font-semibold">Saving Goals</h3>
             <button class="text-gray-500 text-sm">See All</button>
         </div>
 
         <div class="flex gap-4 mb-6">
-            <button class="bg-gray-900 text-white px-6 py-2 rounded-full text-sm">Progress</button>
-            <button class="text-gray-500 px-6 py-2 rounded-full text-sm border">Completed</button>
+            <button class="bg-gray-900 text-white px-4 py-2 rounded-full text-xs w-[150px]">Progress</button>
+            <button class="text-gray-500 px-4 py-2 rounded-full text-xs w-[150px] border">Completed</button>
         </div>
 
         <transition enter-active-class="animate__animated animate__fadeInUp animate__slow" mode="out-in">
@@ -22,12 +22,12 @@
                   [&::-webkit-scrollbar-thumb]:bg-gray-200"
             >
 
-                <div v-for="(item, index) in savingGoals" :key="index" class="inline-block">
-                    <div class="p-4 w-[250px] md:w-[350px] rounded-2xl border border-gray-200">
+                <div v-for="(item, index) in recentGoals" :key="index" class="inline-block">
+                    <div class="p-4 w-[300px] md:w-[350px] rounded-2xl border border-gray-200">
                         <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center mb-3">
                             <span class="text-lg"><i class="fas fa-laptop"></i></span>
                         </div>
-                        <h4 class="font-semibold mb-2 text-lg text-nowrap truncate">{{ item.name }}</h4>
+                        <h4 class="font-semibold mb-2 text-base text-nowrap truncate">{{ item.name }}</h4>
                         <div class="flex justify-between text-sm text-gray-500 mb-2">
                             <span>0</span>
                             <span class="text-gray-500">{{ $helper.currency(item.max_amount) }}</span>
@@ -65,17 +65,22 @@
 
 <script>
 import {getSavingGoals} from "@/service/SavingGoalService";
+import {mapMutations, mapState} from "vuex";
 
 export default {
     name: "RecentSavingGoalComponent",
     data() {
         return {
-            isLoading: false,
-            savingGoals: null
+            isLoading: false
         }
     },
+    computed: {
+        ...mapState('GoalStore', ['recentGoals'])
+    },
     methods: {
+        ...mapMutations('GoalStore', ['setRecentGoals']),
         async getData() {
+            if (this.recentGoals !== null) return
             this.isLoading = true
 
             try {
@@ -86,8 +91,7 @@ export default {
                 let res = await getSavingGoals(params)
 
                 if (res && res.data && res.data.data) {
-                    let data = res.data.data
-                    this.savingGoals = data
+                    this.setRecentGoals(res.data.data)
                 }
             } catch (e) {
                 console.log(e.response.data.message)

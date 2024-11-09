@@ -12,32 +12,7 @@
                 </div>
             </div>
 
-            <!-- Income & Expenses Cards -->
-            <div class="flex-1 lg:flex bg-gray-50 rounded-xl py-2 px-2 mb-8">
-                <div class="w-full p-4 rounded-2xl">
-                    <div class="flex items-center gap-4 mb-2">
-                        <div class="w-12 h-12 rounded-2xl bg-emerald-100 flex items-center justify-center">
-                            <span class="text-xl text-emerald-600"><i class="fas fa-arrow-down-long"></i></span>
-                        </div>
-                        <div>
-                            <p class="text-gray-600 text-sm">Income</p>
-                            <p class="text-xl font-semibold">$2,239.87</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="w-full p-4 rounded-2xl bg-white rounded-2xl">
-                    <div class="flex items-center gap-4 mb-2">
-                        <div class="w-12 h-12 rounded-2xl bg-pink-100 flex items-center justify-center">
-                            <span class="text-xl text-pink-600"><i class="fas fa-arrow-up-long"></i></span>
-                        </div>
-                        <div>
-                            <p class="text-gray-600 text-sm">Expenses</p>
-                            <p class="text-xl font-semibold">1,234.75</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <SumTransactionComponent />
 
             <!-- Chart -->
             <div class="py-4">
@@ -97,74 +72,17 @@
             </div>
         </section>
 
-        <section>
-            <!-- Transactions -->
-            <div class="">
-                <div class="mb-8">
-                    <div class="flex justify-between items-center mb-7">
-                        <h2 class="text-xl font-semibold">Today</h2>
-                        <button class="text-gray-500 text-sm">See All</button>
-                    </div>
-
-                    <div class="space-y-7">
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center gap-4">
-                                <div class="w-9 md:w-12 h-9 md:h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                                    <span class="text-sm md:text-lg"><i class="fas fa-receipt"></i></span>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-base md:text-lg">Bills</h4>
-                                    <p class="text-xs sm:text-sm text-gray-500">27 July 2024 10:40 AM</p>
-                                </div>
-                            </div>
-                            <span class="font-semibold text-gray-900 text-lg">-$200</span>
-                        </div>
-
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center gap-4">
-                                <div class="w-9 md:w-12 h-9 md:h-12 bg-orange-100 rounded-full flex items-center justify-center">
-                                    <span class="text-sm md:text-lg"><i class="fas fa-utensils"></i></span>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-base md:text-lg">Foods & Drinks</h4>
-                                    <p class="text-xs sm:text-sm text-gray-500">27 July 2024 1:20 PM</p>
-                                </div>
-                            </div>
-                            <span class="font-semibold text-gray-900 text-lg">-$12</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mb-6">
-                    <div class="flex justify-between items-center mb-7">
-                        <h2 class="text-xl font-semibold">Yesterday</h2>
-                        <button class="text-gray-500 text-sm">See All</button>
-                    </div>
-
-                    <div class="space-y-7">
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center gap-4">
-                                <div class="w-9 md:w-12 h-9 md:h-12 bg-emerald-100 rounded-full flex items-center justify-center">
-                                    <span class="text-sm md:text-lg"><i class="fas fa-bus"></i></span>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold text-base md:text-lg">Transportation</h4>
-                                    <p class="text-xs sm:text-sm text-gray-500">27 July 2024 10:40 AM</p>
-                                </div>
-                            </div>
-                            <span class="font-semibold text-gray-900 text-lg">-$200</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
+        <ListTransactionComponent />
     </div>
 </template>
 
 <script>
+import SumTransactionComponent from "@/components/insight/SumTransactionComponent.vue";
+import ListTransactionComponent from "@/components/insight/ListTransactionComponent.vue";
+
 export default {
-    name: "InsightView"
+    name: "InsightView",
+    components: {ListTransactionComponent, SumTransactionComponent}
 }
 </script>
 
