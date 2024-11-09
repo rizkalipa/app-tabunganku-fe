@@ -12,7 +12,7 @@
                 </div>
             </div>
 
-            <div class="mb-8">
+            <div class="mb-12">
                 <BarChartComponent />
             </div>
 

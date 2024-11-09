@@ -7,8 +7,8 @@
                         <h2 class="text-base font-semibold">{{ index }}</h2>
                     </div>
 
-                    <div class="space-y-7">
-                        <div v-for="(item, index) in item" :key="index" class="border-b border-gray-100">
+                    <div class="space-y-4">
+                        <div v-for="(item, index) in item" :key="index">
                             <div class="flex items-start gap-4">
                                 <div class="w-9 md:w-16 h-9 md:h-12 bg-blue-100 rounded-full flex items-center justify-center">
                                     <span class="text-sm md:text-lg"><i class="fas fa-receipt"></i></span>

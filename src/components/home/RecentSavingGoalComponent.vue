@@ -2,13 +2,13 @@
     <!-- Saving Goals -->
     <section class="mb-8">
         <div class="flex justify-between items-center mb-4">
-            <h3 class="text-base md:text-lg font-semibold">Saving Goals</h3>
+            <h3 class="text-lg md:text-lg font-semibold">Saving Goals</h3>
             <button class="text-gray-500 text-sm">See All</button>
         </div>
 
         <div class="flex gap-4 mb-6">
-            <button class="bg-gray-900 text-white px-4 py-2 rounded-full text-xs w-[150px]">Progress</button>
-            <button class="text-gray-500 px-4 py-2 rounded-full text-xs w-[150px] border">Completed</button>
+            <button class="bg-gray-900 text-white px-4 py-2 rounded-full text-xs w-[100%]">Progress</button>
+            <button class="text-gray-500 px-4 py-2 rounded-full text-xs w-[100%] border">Completed</button>
         </div>
 
         <transition enter-active-class="animate__animated animate__fadeInUp animate__slow" mode="out-in">

@@ -2,7 +2,7 @@
     <!-- Recent Transaction -->
     <section class="mb-16">
         <div class="flex justify-between items-center mb-7">
-            <h3 class="text-base md:text-lg font-semibold">Recent Expenses</h3>
+            <h3 class="text-lg md:text-lg font-semibold">Recent Expenses</h3>
             <button class="text-gray-500 text-sm">See All</button>
         </div>
 
